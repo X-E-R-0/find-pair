@@ -1,0 +1,176 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    height: 100vh;
+    background-color: #E4D4FF;
+    background-color: #202;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-family: 'Trebuchet MS';
+}
+
+#container {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    width: 90vw;
+    max-width: 500px;
+    gap: 2rem;
+}
+
+.card {
+    width: 40px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #fff;
+    border-radius: 1.5rem;
+    background-color: #f36;
+    transition: 0.8s ease-out;
+    font-size: 3rem;
+}
+
+.card-num {
+    transform: rotateY(180deg);
+}
+
+.score-card {
+    width: 150px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    background-color: #fff;
+    font-size: 4rem;
+}
+
+.score-card.one {
+    border-top-right-radius: 2rem;
+    bottom: 0px;
+    color: #f55;
+    box-shadow: 0 0 20px 4px #f55;
+}
+
+.score-card.two {
+    border-bottom-right-radius: 2rem;
+    top: 0;
+    color: #55f;
+    box-shadow: 0 0 20px 4px #55f;
+}
+
+#menu-btn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    z-index: 1;
+}
+
+#menu-container {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000C4;
+    z-index: 1;
+    transition: 1s ease-out;
+}
+
+#menu {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    border: 0.5rem solid #4A008F;
+    border-radius: 3rem;
+    background: linear-gradient(#d7f, #a6e, #d7f);
+    box-shadow: 0 0 10px 5px #200046;
+    text-align: center;
+    color: #204;
+}
+
+#menu > p {
+    margin: 0;
+    padding: 0;
+}
+
+#winner-msg {
+    font-size: 3rem;
+}
+
+#selected-type {
+    font-size: 2rem;
+}
+
+#play-again-btn, #menu > div > button {
+    padding: 1rem 2rem;
+    border: 0.4rem solid #408;
+    border-radius: 1.5rem;
+    background: linear-gradient(#FFCF8F 55%, #FFA320);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#close-btn {
+    position: absolute;
+    top: 200px;
+    right: 55px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: transparent;
+    font-size: 3.5rem;
+    color: inherit;
+}
+
+.bar {
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    transition: 0.7s ease-in-out;
+}
+
+.bar.one {
+    height: 100px;
+    bottom: 0;
+    background: linear-gradient(transparent, #f55);
+}
+
+.bar.two {
+    top: 0;
+    height: 0;
+    background: linear-gradient(#55f, transparent);
+}
+
+.card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    transform: "rotateY(180deg)";
+    transition: 0.8s ease-out;
+}
